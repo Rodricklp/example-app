@@ -1,16 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Document</title>
-</head>
-<body>
-    Aqui se ve el post: {{ $post }}
-    <h1 class="text-3xl font-bold underline">
-        Hello world!
-    </h1>
-</body>
-</html>
+@extends('components.plantilla')
+
+@section('title')
+    Post
+@endsection
+
+@push('css')
+    <style>
+        body {
+            color: white;
+        }
+    </style>
+@endpush
+
+@section('contenido')
+    <p>Aqui se ve el post</p>
+    <x-alert2 type="danger">
+        <x-slot name="title">
+            Titulo Post
+        </x-slot>
+        Alerta para post
+    </x-alert2>
+@endsection
+
+@push('css')
+<style>
+    body {
+        background-color: chocolate;
+    }
+</style>    
+@endpush
+   
