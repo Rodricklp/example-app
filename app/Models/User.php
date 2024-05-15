@@ -44,4 +44,22 @@ class User extends Authenticatable
             'password' => 'hashed',
         ];
     }
+
+    public function perfil() {
+        $this->belongsTo(Perfil::class);
+    }
+
+    // Opiones realizadas por el usuario
+    public function opiniones() {
+        $this->hasMany(Opinion::class);
+    }
+
+    public function persona() {
+        $this->hasOneThrough(Persona::class, Perfil::class);
+    }
+
+    // Opiones que tiene un post del Usuario
+    public function getOpiniones() {
+        $this->hasManyThrough(Opinion::class, Post::class);
+    }
 }
