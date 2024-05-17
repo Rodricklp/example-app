@@ -38,10 +38,10 @@ class Persona extends Model
     ];
 
     public function perfil() {
-        $this->hasOne(Perfil::class);
+        return $this->hasOne(Perfil::class);
     }
 
     public function user() {
-        $this->hasOneThrough(User::class, Perfil::class);
+        return $this->hasOneThrough(User::class, Perfil::class);
     }
 }

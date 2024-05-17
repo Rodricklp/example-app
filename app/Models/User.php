@@ -17,6 +17,7 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
+        'perfil_id',
         'name',
         'email',
         'password',
@@ -46,20 +47,24 @@ class User extends Authenticatable
     }
 
     public function perfil() {
-        $this->belongsTo(Perfil::class);
+        return $this->belongsTo(Perfil::class);
     }
 
     // Opiones realizadas por el usuario
     public function opiniones() {
-        $this->hasMany(Opinion::class);
+        return $this->hasMany(Opinion::class);
     }
 
     public function persona() {
-        $this->hasOneThrough(Persona::class, Perfil::class);
+        return $this->hasOneThrough(Persona::class, Perfil::class, 'id', 'id', 'perfil_id', 'persona_id');
     }
 
     // Opiones que tiene un post del Usuario
     public function getOpiniones() {
-        $this->hasManyThrough(Opinion::class, Post::class);
+        return $this->hasManyThrough(Opinion::class, Post::class);
+    }
+
+    public function posts() {
+        return $this->hasMany(Post::class);
     }
 }

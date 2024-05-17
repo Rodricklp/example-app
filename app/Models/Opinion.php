@@ -14,14 +14,14 @@ class Opinion extends Model
     public $guarded = [];
 
     public function post() {
-        $this->belongsTo(Post::class);
+        return $this->belongsTo(Post::class);
     }
 
     public function user() {
-        $this->belongsTo(User::class);
+        return $this->belongsTo(User::class);
     }
 
     public function getUser() {
-        $this->hasManyThrough(User::class, Post::class);
+        return $this->hasManyThrough(User::class, Post::class, 'id', 'id', 'post_id', 'user_id');
     }
 }

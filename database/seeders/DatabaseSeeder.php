@@ -13,11 +13,20 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
+        $this->call([
+            PersonaSeeder::class,
+        ]);
 
+        /* $this->call([
+            PerfilSeeder::class,
+        ]);
+        
         User::factory()->create([
+            'perfil_id' => 1,
             'name' => 'Test User',
             'email' => 'test@example.com',
-        ]);
+        ]); */
+
+        //User::factory(9)->create();
     }
 }

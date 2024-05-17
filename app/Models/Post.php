@@ -12,10 +12,18 @@ class Post extends Model
     public $guarded = [];
 
     public function opiniones() {
-        $this->hasMany(Opinion::class);
+        return $this->hasMany(Opinion::class);
     }
 
     public function etiquetas() {
-        $this->belongsToMany(Etiqueta::class);
+        return $this->belongsToMany(Etiqueta::class);
+    }
+
+    public function user() {
+        return $this->belongsTo(User::class);
+    }
+
+    public function asignaciones() {
+        return $this->hasMany(Asigna::class);
     }
 }

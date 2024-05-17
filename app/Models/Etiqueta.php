@@ -11,7 +11,7 @@ class Etiqueta extends Model
 
     public $guarded = [];
 
-    public function posts() {
-        $this->belongsToMany(Post::class);
+    public function asignaciones() {
+        return $this->hasMany(Asigna::class);
     }
 }

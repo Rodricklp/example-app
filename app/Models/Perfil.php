@@ -9,14 +9,16 @@ class Perfil extends Model
 {
     use HasFactory;
 
+    protected $table = "perfiles";
+
     public $guarded = [
     ];
 
     public function persona() {
-        $this->belongsTo(Persona::class);
+        return $this->belongsTo(Persona::class);
     }
 
     public function user() {
-        $this->hasOne(User::class);
+        return $this->hasOne(User::class);
     }
 }

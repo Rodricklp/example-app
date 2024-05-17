@@ -11,13 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('etiquetas', function (Blueprint $table) {
+        Schema::create('asignaciones', function (Blueprint $table) {
             $table->id();
 
-            $table->unsignedBigInteger('asigna_id');
-            $table->string('nombre');
+            $table->unsignedBigInteger('etiqueta_id');
+            $table->unsignedBigInteger('post_id');
 
-            $table->foreign('asigna_id')->references('id')->on('asignaciones');
+            $table->foreign('etiqueta_id')->references('id')->on('etiquetas');
+            $table->foreign('post_id')->references('id')->on('posts');
 
             $table->timestamps();
         });
@@ -28,6 +29,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('etiquetas');
+        Schema::dropIfExists('asignaciones');
     }
 };

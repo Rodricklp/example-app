@@ -17,7 +17,7 @@ return new class extends Migration
             $table->string('nombres');
             $table->string('paterno', 50)->nullable();
             $table->string('materno', 50)->nullable();
-            $table->string('telefono', 15)->nullable();
+            $table->string('telefono', 30)->nullable();
             $table->string('direccion');
             $table->date('fnac');
 

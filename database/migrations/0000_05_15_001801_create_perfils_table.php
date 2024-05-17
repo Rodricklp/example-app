@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('perfiles', function (Blueprint $table) {
             $table->id();
 
-            $table->unsignedBigInteger('persona_id');
+            $table->unsignedBigInteger('persona_id')->unique();
             $table->string('facebook');
             $table->string('x');
 
