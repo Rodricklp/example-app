@@ -14,10 +14,7 @@ return new class extends Migration
         Schema::create('etiquetas', function (Blueprint $table) {
             $table->id();
 
-            $table->unsignedBigInteger('asigna_id');
             $table->string('nombre');
-
-            $table->foreign('asigna_id')->references('id')->on('asignaciones');
 
             $table->timestamps();
         });

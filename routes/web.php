@@ -11,5 +11,3 @@ Route::get('/', function () {
 Route::view('/bienvenido', 'prueba');
 
 Route::resource('/posts', PostController::class);
-Route::get('/suma', [PostController::class, 'cifras'])->name('suma.cifras');
-Route::get('/gestion', [GestionPosts::class, 'index']);
