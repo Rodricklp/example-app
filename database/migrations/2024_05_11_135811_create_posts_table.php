@@ -18,6 +18,7 @@ return new class extends Migration
 
             $table->string('title', 15);
             $table->string('body');
+            $table->string('image');
             $table->foreign('user_id')->references('id')->on('users');
 
             $table->timestamps();
