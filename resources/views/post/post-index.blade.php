@@ -40,13 +40,13 @@
 
 @foreach ($posts as $item)
 
-    <div class="max-w-fit mb-5 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div class="max-w-fit mb-5 bg-white border border-gray-200 rounded-lg shadow">
         
         <img class="rounded-t-lg" src="{{ asset('storage') . '/' . $item->image }}" alt="" />
         
         <div class="p-5">
             <div class="flex gap-2">
-                <h5 class="flex-1 mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">{{$item->title}}</h5>
+                <h5 class="flex-1 mb-2 text-2xl font-bold tracking-tight text-gray-900">{{$item->title}}</h5>
                 
                 <a class="text-yellow-700" href="{{ route('posts.edit', $item) }}">
                     <span class="fa fa-pencil"></span>
@@ -59,21 +59,21 @@
                     </button>
                 </form>
             </div>
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">{{$item->body}}</p>
+            <p class="mb-3 font-normal text-gray-700">{{$item->body}}</p>
         </div>
     </div>
 
 @endforeach
 
-<div class="max-w-fit mb-5 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+<div class="max-w-fit mb-5 bg-white border border-gray-200 rounded-lg shadow">
     <a href="#">
         <img class="rounded-t-lg" src="/docs/images/blog/image-1.jpg" alt="" />
     </a>
 
     <div class="p-5">
         <a href="{{ route('posts.create') }}">
-            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">Nuevo Post</h5>
-            <p class="mb-3 font-normal text-gray-700 dark:text-gray-400">¿Tienes una idea?, ¡COmpartela!</p>
+            <h5 class="mb-2 text-2xl font-bold tracking-tight text-gray-900">Nuevo Post</h5>
+            <p class="mb-3 font-normal text-gray-700">¿Tienes una idea?, ¡COmpartela!</p>
         </a>
     </div>
 

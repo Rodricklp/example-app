@@ -23,5 +23,14 @@ class PersonaSeeder extends Seeder
         ]); */
 
         Persona::factory(9)->create();
+
+        Persona::create([
+            'nombres' => 'rodrick',
+            'paterno' => 'perez',
+            'materno' => 'lopez',
+            'telefono' => '77889944',
+            'direccion' => 'Avenida de Prueba NO. 78',
+            'fnac' => '1999-05-10',
+        ]);
     }
 }

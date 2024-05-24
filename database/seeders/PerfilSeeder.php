@@ -20,5 +20,11 @@ class PerfilSeeder extends Seeder
         ]); */
 
         Perfil::factory(9)->create();
+
+        Perfil::create([
+            'persona_id' => 10,
+            'facebook' => 'fb.com',
+            'x' => 'x.com'
+        ]);
     }
 }

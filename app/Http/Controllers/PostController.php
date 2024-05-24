@@ -16,7 +16,6 @@ class PostController extends Controller
             'title' => 'required|max:15',
             'body' => 'required',
         ],[
-            'required' => 'El campo :attribute es obligatorio.'
         ],[
             'user_id' => 'usuario',
         ])->validate();
