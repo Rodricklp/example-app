@@ -44,4 +44,8 @@ class Persona extends Model
     public function user() {
         return $this->hasOneThrough(User::class, Perfil::class);
     }
+
+    public function nombreCompleto() {
+        return $this->nombres . ' ' . $this->paterno . ' ' .$this->materno;
+    }
 }

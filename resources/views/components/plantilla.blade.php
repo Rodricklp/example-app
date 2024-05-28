@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="//cdn.datatables.net/2.0.7/js/dataTables.min.js"></script>
     @stack('css')
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="//cdn.datatables.net/2.0.7/css/dataTables.dataTables.min.css">
     {{-- css --}}
     {{-- js --}}
     {{-- font --}}
@@ -39,6 +42,20 @@
                         class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group">
                         <span class="fa fa-home"></span>
                         <span class="ms-3">Welcome</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('roles.index') }}"
+                        class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group">
+                        <span class="fa fa-shield"></span>
+                        <span class="ms-3">Roles y Permisos</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ route('users.index') }}"
+                        class="flex items-center p-2 text-gray-900 rounded-lg hover:bg-gray-100 group">
+                        <span class="fa fa-users"></span>
+                        <span class="ms-3">Usuarios</span>
                     </a>
                 </li>
                 <li>

@@ -15,6 +15,7 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             PersonaSeeder::class,
+            RoleSeeder::class,
         ]);
 
         /* $this->call([
